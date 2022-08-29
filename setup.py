@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='bulb',
-    version='1.0.1',
+    version='1.0.2',
     packages=[''],
     url='https://github.com/corka149/bulb',
     license='MIT',

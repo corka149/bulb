@@ -19,7 +19,7 @@ def cli(brightness, target):
     args = ["xrandr", "--output", target, "--brightness", str(brightness)]
 
     with Popen(args) as xrandr:
-        exit_code = xrandr.returncode
+        exit_code = xrandr.wait()
 
         if exit_code != 0:
             reason = xrandr.stderr.read()
