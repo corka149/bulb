@@ -21,7 +21,7 @@ def cli(brightness, target):
     with Popen(args) as xrandr:
         exit_code = xrandr.returncode
 
-        if exit_code != 1:
+        if exit_code != 0:
             reason = xrandr.stderr.read()
             _print_err(f"Could not change brightness. Exit code {exit_code} - {reason}")
 
